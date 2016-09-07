@@ -38,11 +38,12 @@ n = 1
 numsum = 0
 while 1:
 	numsum += n
-	# print n,numsum,decomposeall(numsum),len(decomposeall(numsum))
-	if len(decomposeall(numsum)) > 500 :
-		print n,numsum,decomposeall(numsum)
-		print 
-		break
+	if n > 10000:
+		# print n,numsum,decomposeall(numsum),len(decomposeall(numsum))
+		if len(decomposeall(numsum)) > 500 :
+			print n,numsum,decomposeall(numsum)
+			print
+			break
+		if n%100==0:
+			print n,numsum,len(decomposeall(numsum))
 	n += 1
-	if n%100==0:
-		print n,numsum,len(decomposeall(numsum))
