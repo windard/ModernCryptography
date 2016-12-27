@@ -4,6 +4,8 @@ import string
 
 letter = string.lowercase
 
+text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,. "
+
 def concide(ciphertext):
 	ic = {}
 	for x in xrange(2,11):
@@ -50,9 +52,11 @@ if __name__ == '__main__':
 								key.append((ord('e') - ord(f[0]))%26)
 								key.append((ord('e') - ord(g[0]))%26)
 								messagetext = "".join([decaesar(x.lower(),key[i%k]) for i,x in enumerate(ciphertext) ])
-								if messagetext.count("the") + messagetext.count("be") + messagetext.count("and") + messagetext.count("of") > 10:
+								if messagetext.count("the") + messagetext.count("be") + messagetext.count("and") > 10:
 									print( str(messagetext.count("the"))+" "+str(messagetext.count("be"))+" "+str(messagetext.count("and"))+" "+messagetext)
 									print key
+
+# hesmiledunderstandinglymuchmorethanunderstandinglyitwasoneofthoseraresmileswithaqualityofeternalreassuranceinitwhichyoumaycomeacrossfourorfivetimesinlifeitfacedorseemedtofacethewholeexternalworldforaninstantandthenconcentratedonyouwithanirresistibleprejudiceinyourfavoritunderstoodyoujustsofarasyouwantedtobeunderstoodbelievedinyouasyouwouldliketobelieveinyourselfandassuredyouthatithadpreciselytheimpressionofyouthatatyourbestyouhopedtoconvey
 
 # The Great Gatsby
 
