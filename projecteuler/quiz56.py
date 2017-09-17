@@ -1,23 +1,26 @@
 # coding=utf-8
 
-digitalSum = lambda n: reduce(lambda x, y: x+y, map(int, list(str(n))))
+digitalSum = lambda n: sum(map(int, str(n)))
 
 # print digitalSum(123456789)
 
-nums = []
+def main():
+    nums = []
+    for i in xrange(100):
+        for j in xrange(100):
+            try:
+                nums.append(digitalSum(i**j))
+            except Exception, e:
+                print tuple(e)
+                print max(nums)
+    return nums
 
-import math
 
-for i in xrange(100):
-    for j in xrange(100):
-        try:
-            nums.append(digitalSum(int(math.pow(i, j))))
-        except Exception, e:
-            print tuple(e)
-            print max(nums)
 
-print len(nums)
-print max(nums)
+if __name__ == '__main__':
+    print max(main())
+# print len(nums)
+# print max(nums)
 # 978
 
 # print math.pow(99, 99)
