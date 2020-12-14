@@ -1,9 +1,10 @@
 # coding=utf-8
 
-# how to check a point inside of a triangle
+# how to check a point inside a triangle
 
 # 叉乘
 # A(x1, y1) ^ B(x2, y2) = x1y2 - x2y1
+# https://blog.nowcoder.net/n/385dfbad3f2a4eaaabc50347c472aa50#%E5%90%8C%E4%BE%A7%E6%B3%95%EF%BC%9A
 
 # 1. 计算面积
 # ![](https://windard-blog.oss-cn-beijing.aliyuncs.com/1607871592119.png) 
